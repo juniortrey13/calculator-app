@@ -11,8 +11,9 @@ allButtons.forEach(button => {
     });
 });
 
-const clearButton = document.querySelector('buttons button:last-child')
+const clearButton = document.querySelector('.clear-button');
 
 clearButton.addEventListener('click', ()=>{
     display.textContent = '';
-})
+    console.log('Erased');
+});
