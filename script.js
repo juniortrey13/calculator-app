@@ -7,6 +7,7 @@ const buttonsContainer = document.querySelector('.buttons'); // Select the conta
 const allButtons = buttonsContainer.querySelectorAll('button'); // Select buttons within the container
 const clearButton = document.querySelector('.clear-button');
 const operatorButtons = document.querySelectorAll('.addition-button, .subtraction-button, .multiplication-button, .division-button');
+const resultButton = document.querySelectorAll('.result-button');
 
 console.log('Number of operator buttons found:', operatorButtons.length); // Add this line
 
@@ -37,3 +38,35 @@ operatorButtons.forEach(operatorButton => {
         console.log('Current Operator:', currentOperator);
     });
 });
+
+resultButton.addEventListener('click', () => {
+    secondOperand = parseFloat(display.textContent);
+    let result;
+
+    switch(currentOperator) {
+        case '+':
+            result = firstOperand + secondOperand;
+            break;
+        case '-':
+            result = firstOperand - secondOperand;
+            break;
+        case '*':
+            result = firstOperand * secondOperand;
+            break;
+        case '/':
+            if (secondOperand === 0) {
+                result = 'Error: Division by zero';
+            } else {
+                result = firstOperand / secondOperand;
+            }
+            break;
+        default:
+            result = secondOperand;
+            break;
+    }
+
+    display.textContent = result;
+    currentOperator = null;
+    firstOperand = result;
+    secondOperand = null;
+})
