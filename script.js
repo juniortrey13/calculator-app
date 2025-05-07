@@ -70,4 +70,15 @@ resultButton.addEventListener('click', () => {
     currentOperator = null;
     firstOperand = result;
     secondOperand = null;
+    console.log( result );
 })
+
+decimalButton.addEventListener('click', () => {
+    if (!display.textContent.includes('.')) {
+        if (display.textContent === '' || display.textContent === 0) {
+            display.textContent = '0';
+        } else {
+            display.textContent += '.';
+        }
+    }
+});
