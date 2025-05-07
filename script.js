@@ -8,6 +8,7 @@ const allButtons = buttonsContainer.querySelectorAll('button'); // Select button
 const clearButton = document.querySelector('.clear-button');
 const operatorButtons = document.querySelectorAll('.addition-button, .subtraction-button, .multiplication-button, .division-button');
 const resultButton = document.querySelector('.result-button');
+const decimalButton = document.querySelector('.decimal-button');
 
 console.log('Number of operator buttons found:', operatorButtons.length); // Add this line
 
