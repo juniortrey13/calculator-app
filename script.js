@@ -7,7 +7,7 @@ const buttonsContainer = document.querySelector('.buttons'); // Select the conta
 const allButtons = buttonsContainer.querySelectorAll('button'); // Select buttons within the container
 const clearButton = document.querySelector('.clear-button');
 const operatorButtons = document.querySelectorAll('.addition-button, .subtraction-button, .multiplication-button, .division-button');
-const resultButton = document.querySelectorAll('.result-button');
+const resultButton = document.querySelector('.result-button');
 
 console.log('Number of operator buttons found:', operatorButtons.length); // Add this line
 
