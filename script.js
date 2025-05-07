@@ -1,3 +1,5 @@
+console.log('Hello World!');
+
 let firstOperand = null;
 let secondOperand = null;
 let currentOperator = null;
