@@ -1,10 +1,12 @@
 const display = document.querySelector('.display');
-const buttons = document.querySelector('.buttons button');
+const buttonsContainer = document.querySelector('.buttons'); // Select the container div
+const allButtons = buttonsContainer.querySelectorAll('button'); // Select buttons within the container
 
-buttons.forEach(button =>{ // a method that can be used on a NodeList to iterate over each item in the list.
-    button.addEventListener('click', ()=>{ // a method that attaches an event listener to a specific element - in this we added 'click' followed by an arrow function.
+console.log('Number of buttons found:', allButtons.length);
+
+allButtons.forEach(button => {
+    button.addEventListener('click', () => {
         const buttonText = button.textContent;
         display.textContent += buttonText;
     });
 });
-
