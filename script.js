@@ -15,5 +15,12 @@ const clearButton = document.querySelector('.clear-button');
 
 clearButton.addEventListener('click', ()=>{
     display.textContent = '';
-    console.log('Erased');
+    console.log('Display Cleared');
 });
+
+let firstOperand = null;
+let secondOperand = null;
+let currentOperator = null;
+
+const operatorButtons = document.querySelectorAll('.addition-button', '.subtraction-button', 'multiplication-button', 'division-button');
+
