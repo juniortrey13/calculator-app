@@ -10,3 +10,9 @@ allButtons.forEach(button => {
         display.textContent += buttonText;
     });
 });
+
+const clearButton = document.querySelector('buttons button:last-child')
+
+clearButton.addEventListener('click', ()=>{
+    display.textContent = '';
+})
